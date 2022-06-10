@@ -16,6 +16,8 @@ myapps:
 	gcc $(APPS)/app_com_mytime.c 	$(OBJ)/*.o 	-I $(INCLUDE) -o $(BIN)/app_com_mytime
 
 %.o: $(SRC)/%.c $(INCLUDE)/%.h
+	@mkdir -p $(BIN)
+	@mkdir -p $(OBJ)
 	gcc -c $< 	-I $(INCLUDE) -o $(OBJ)/$@
 
 run:
