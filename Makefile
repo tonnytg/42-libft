@@ -20,6 +20,9 @@ myapps:
 	@mkdir -p $(OBJ)
 	gcc -c $< 	-I $(INCLUDE) -o $(OBJ)/$@
 
+test:
+	$(BIN)/app
+
 run:
 	$(BIN)/app
 
