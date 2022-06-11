@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 01:29:17 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/03 14:03:03 by antthoma         ###   ########.fr       */
+/*   Created: 2022/06/03 01:13:51 by antthoma          #+#    #+#             */
+/*   Updated: 2022/06/07 01:11:30 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+int ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	return (((unsigned char)c <= 127));
 }

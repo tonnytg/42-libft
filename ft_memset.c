@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 01:29:17 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/03 14:03:03 by antthoma         ###   ########.fr       */
+/*   Created: 2022/06/07 00:32:32 by antthoma          #+#    #+#             */
+/*   Updated: 2022/06/07 01:28:42 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+void	*memset(void *dest, int val, size_t len)
 {
-	int	i;
+	unsigned char	*ptr;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	ptr = dest;
+	while (len-- > 0)
+		*ptr++ = val;
+	return (dest);
 }
+
+/*
+	função que recebe alguns parametros, sendo um array,
+	um valor a ser setado em todo array e o tamanho a ser percorrido.
+	Ela trabalha com void para conseguir receber qualquer tipo de ponteiro.
+*/

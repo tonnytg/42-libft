@@ -1,30 +1,47 @@
+NAME		= 	libft.a
+CFLAGS		= 	-Wall -Werror -Wextra -I . -c
+TFLAGS		= 	-Wall -Werror -Wextra
+SRC			= 	./src
+TESTF		=	./tests
+FILES		= 	\
+				ft_strlen.c \
+				ft_isdigit.c
 
-SRC = ./src
-BIN = ./bin
-INCLUDE = ./include
-OBJ = ./obj
-APPS = ./apps
+OBJ			= $(FILES:%.c=%.o)
+TESTC		= $(FILES:%.c=%_test.c)
+TESTO		= $(FILES:%.c=%_test.o)
 
-all: libed myapps
+all: copy $(NAME)
 
-libed: \
-	float_vector.o \
-	mytime.o
+copy:
+	cp -f $(SRC)/*.c .
 
-myapps:
-	gcc $(APPS)/app.c 				$(OBJ)/*.o 	-I $(INCLUDE) -o $(BIN)/app
-	gcc $(APPS)/app_com_mytime.c 	$(OBJ)/*.o 	-I $(INCLUDE) -o $(BIN)/app_com_mytime
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+	cp -a $(NAME) $(TESTF)
 
-%.o: $(SRC)/%.c $(INCLUDE)/%.h
-	@mkdir -p $(BIN)
-	@mkdir -p $(OBJ)
-	gcc -c $< 	-I $(INCLUDE) -o $(OBJ)/$@
+$(OBJ): $(FILES)
+	gcc $(CFLAGS) $(FILES)
 
-test:
-	$(BIN)/app
+test: ft_strlen_test.c
 
-run:
-	$(BIN)/app
+ft_strlen_test.c: ft_strlen.c
+	gcc $(TFLAGS) $(TESTF)/$@ -o teste.o
+	@echo -e "Compiled "$<" successfully!\n"
+
+# $(TESTO): $(FILES)
+# 	./$@
 
 clean:
-	rm $(BIN)/* $(OBJ)/*
+	rm -f $(OBJ)
+	rm -f $(FILES).c
+	rm -f *.c
+	rm -rf *.o
+
+fclean: clean
+	rm -f $(NAME)
+	rm -f $(TESTS)/$(NAME)
+
+re: fclean all
+
+.PHONY: clean fclean all re
