@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 22:43:27 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/15 00:31:56 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/15 13:30:44 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,14 @@ void	ft_bzero(void *s, size_t n);
 /*
 	Function: ft_memcpy
 
-	copy memory from src to dest but can overlap area.
+	copy memory from src to dest but can overlap area
 */
 void *ft_memcpy(void *dest, const void *src, size_t n);
 
 /*
 	Function: ft_memmove
 
-	check overlap and after copy
+	create a buffer to copy byte and don't do overlap
+	return buffer_dest copied
 */
 void *ft_memmove (void *dest, const void *src, size_t n)
