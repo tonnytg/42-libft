@@ -6,24 +6,40 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 23:52:54 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/15 02:35:50 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/15 04:46:56 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
-void ft_memmove (char *dest, char *src)
+
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	printf("dest: %s\n", dest);
-	printf("src: %s\n", src);
-	// return (0);
+	int	i;
+	char *buffer;
+
+	i = 0;
+	while (i < n)
+	{
+		buffer[i] = *((char *)src ++);
+		i++;
+	}
+	i = 0;
+	while (i < n)
+	{
+		*((char *)dest + i) = buffer[i];
+		i++;
+	}	
+	return (dest);
 }
 
-int main()
-{
-	char *value1 = "Antonio";
-	char *value2;
+/*
+	A função memmove() copia n bytes da área de memória src
+	para a área de memória dest.
 	
-	ft_memmove(value2, value1);
-	printf("value2: %s\n", *value2);
-}
+	As áreas de memória podem se sobrepor:
+	a cópia ocorre como se os bytes em src fossem
+	primeiro copiado em um array temporário
+	que não se sobreponha a src ou dest,
+	e os bytes são então copiados do array temporário para dest.
+*/
