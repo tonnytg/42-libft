@@ -3,3 +3,6 @@
 
 on .github/workflow contains a file with container instructions,
 to test make
+
+- make
+- make test
