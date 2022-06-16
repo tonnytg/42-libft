@@ -22,6 +22,9 @@ all:
 	$(CC) $(CC_FLAGS) $(FILES)
 	ar rsc $(NAME) $(OBJS)
 
+test:
+	gcc -Wall src/ft_strlen.c tests/ft_strlen_test.c
+
 clean:
 	rm -rf $(OBJS)
 
