@@ -1,6 +1,7 @@
 CC	= gcc
 CC_ARGS = -Wextra -Wall -Werror -Werror=sign-compare -I . -c
 
+NAME = libft.a
 FILES = $(wildcard libft/*.c)
 
 all: copy check copile clean
@@ -18,3 +19,4 @@ check:
 
 clean:
 	rm -rf *.o
+	rm -rf $(NAME)
