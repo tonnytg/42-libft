@@ -9,9 +9,12 @@ all: copy check copile clean
 copile:
 	$(CC) $(CC_ARGS) $(FILES)
 
-copy:
+copy: libft
 	cp -v -a ../libft-v1/* libft
 	@echo "---"
+
+libft:
+	@mkdir libft
 
 check:
 	norminette -R CheckForbiddenSourceHeader libft/ft*.c
