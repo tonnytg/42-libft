@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/13 22:52:09 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/18 21:48:57 by antthoma         ###   ########.fr       */
+/*   Created: 2022/06/20 23:31:58 by antthoma          #+#    #+#             */
+/*   Updated: 2022/06/20 23:37:51 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int ft_atoi(const char *nptr)
 {
-	size_t	i;
-
-	i = 0;
-	while (*((char *)src + i) != '\0' && i < n)
-	{
-		*((char *)dest + i) = *((char *)src + i);
-		i++;
-	}
-	*((char *)dest + (i + 1)) = '\0';
-	return (dest);
+	
+	return (0);
 }
 
-/*
-	Function: ft_memcpy
+int main()
+{
+	char *value1 = "123Antonio";
+	int result1 = atoi(value1);
+	int result2 = ft_atoi(value1);
+	
+	printf("atoi: %d\n", atoi(value1));
+	printf("ft_atoi: %d\n", ft_atoi(value1));
 
-	receive source and destiny with number of bytes
-	and copy each letter from src to dest and return it
-*/
+}

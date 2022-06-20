@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy_test.c                                   :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 23:47:44 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/14 23:52:14 by antthoma         ###   ########.fr       */
+/*   Created: 2022/06/18 21:53:59 by antthoma          #+#    #+#             */
+/*   Updated: 2022/06/19 00:25:21 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
-int main()
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	char *value1 = "Antonio";
-	char value2[sizeof(value1)];
+	int			i;
+	const char	*buffer_src;
+	char		*buffer_dst;
 
-	printf("value2: %s\n", value2);
-	ft_memcpy(value2, value1, sizeof(value1));
-	printf("value1: %s\n", value1);
-	printf("value2: %s\n", value2);
+	buffer_src = src;
+	buffer_dst = dst;
+	i = 0;
+	while (i < size && buffer_src[i] != '\0')
+	{
+		buffer_dst[i] = buffer_src[i];
+		i++;
+	}
+	buffer_dst[i] = '\0';
+	return (i);
 }

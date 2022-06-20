@@ -6,11 +6,11 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 22:43:27 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/17 05:47:48 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/20 23:10:26 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+# include <stdlib.h>
 
 /*
 	Function:	ft_isalpha
@@ -50,7 +50,7 @@ int	ft_isascii(int c);
 	count each positon at find NULL and return numbers of letter
 	return int with count characters
 */
-int	ft_strlen(const char *str);
+size_t	ft_strlen(const char *s);
 
 /*
 	Function: memset
@@ -80,3 +80,16 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 	check overlap and after copy
 */
 void *ft_memmove (void *dest, const void *src, size_t n);
+
+/*
+	Function: ft_strlcpy
+
+	copy char from src to dst and check size
+	return count letters
+*/
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+
+/*
+	
+*/
+char	*ft_strnstr(const char *big, const char *little, size_t len);

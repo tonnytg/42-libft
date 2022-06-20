@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_ toupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/13 22:52:09 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/18 21:48:57 by antthoma         ###   ########.fr       */
+/*   Created: 2022/06/19 01:30:51 by antthoma          #+#    #+#             */
+/*   Updated: 2022/06/19 02:19:04 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (*((char *)src + i) != '\0' && i < n)
-	{
-		*((char *)dest + i) = *((char *)src + i);
-		i++;
-	}
-	*((char *)dest + (i + 1)) = '\0';
-	return (dest);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
-
-/*
-	Function: ft_memcpy
-
-	receive source and destiny with number of bytes
-	and copy each letter from src to dest and return it
-*/
