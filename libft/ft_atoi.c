@@ -6,27 +6,35 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 23:31:58 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/20 23:37:51 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/21 04:17:00 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-int ft_atoi(const char *nptr)
+static int	ft_isspace(char c);
+
+int	ft_atoi(const char *nptr)
 {
-	
-	return (0);
+	int	total;
+	int	sign;
+
+	sign = 1;
+	total = 0;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+	{
+		if (*nptr == '-')
+			sign *= (-1);
+		nptr++;
+	}
+	while (ft_isdigit(*nptr))
+		total = *(nptr++) - '0' + (total * 10);
+	return (total * sign);
 }
 
-int main()
+static int	ft_isspace(char c)
 {
-	char *value1 = "123Antonio";
-	int result1 = atoi(value1);
-	int result2 = ft_atoi(value1);
-	
-	printf("atoi: %d\n", atoi(value1));
-	printf("ft_atoi: %d\n", ft_atoi(value1));
-
+	return (c == 32 || (c >= 9 && c <= 13));
 }
