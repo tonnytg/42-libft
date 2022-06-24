@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 22:52:09 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/18 21:48:57 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/21 05:09:19 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	unsigned char		*str1;
+	const unsigned char	*str2;
 
-	i = 0;
-	while (*((char *)src + i) != '\0' && i < n)
-	{
-		*((char *)dest + i) = *((char *)src + i);
-		i++;
-	}
-	*((char *)dest + (i + 1)) = '\0';
-	return (dest);
+	if (!dest && !src)
+		return (0);
+	str1 = dest;
+	str2 = src;
+	while (n-- > 0)
+		*str1++ = *str2++;
+	return (str1);
 }
 
 /*

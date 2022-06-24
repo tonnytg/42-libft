@@ -26,3 +26,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 	return ;
 }
+
+/*
+	ft_bzero sets the first n characters of the string s to 0.
+*/

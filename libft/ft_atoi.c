@@ -12,7 +12,33 @@
 
 #include "libft.h"
 
-int ft_atoi()
+static int	ft_isspace(char c);
+
+int	ft_atoi(const char *nptr)
 {
-	return (0);
+	int	total;
+	int	sign;
+
+	sign = 1;
+	total = 0;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
+	{
+		if (*nptr == '-')
+			sign *= (-1);
+		nptr++;
+	}
+	while (ft_isdigit(*nptr))
+		total = *(nptr++) - '0' + (total * 10);
+	return (total * sign);
 }
+
+static int	ft_isspace(char c)
+{
+	return (c == 32 || (c >= 9 && c <= 13));
+}
+
+/*
+	ft_atoi returns the integer value of a string.
+*/
