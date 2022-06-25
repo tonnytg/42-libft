@@ -20,14 +20,12 @@ char	*ft_substr(char const *s, unsigned int start,size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s) || len == 0)
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	src_count = 0;
-	while (src_count < len && s[src_count + start])
+	while (src_count < len && s[start + src_count])
 		src_count++;
 	sub = (char *) malloc((1 * src_count) + 1);
-	if (!sub)
-		return (NULL);
 	sub_count = 0;
 	while (sub_count < src_count)
 	{

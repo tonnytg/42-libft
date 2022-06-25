@@ -13,153 +13,129 @@
 # include <stdlib.h>
 
 /*
-	Function:	ft_isalpha
-
-	check character is alphabet
-	return 1 to true or 0 to false
+	ft_isalpha is a character
 */
 int	ft_isalpha(int c);
 
 /*
-
+	ft_isprint is a function that checks if a character is printable. 
 */
 int	ft_isprint(int c);
 
 /*
-
+	ft_tolower is a function that converts a character to lowercase.
 */
 int	ft_tolower(int c);
 
 /*
-	Function: ft_isdigit
-
-	check if character is digit
-	return 1 to true and 0 to false
+	ft_isdigit is a function that checks if a character is a digit.
 */
 int	ft_isdigit(int c);
 
 /*
-
+	ft_toupper is a function that converts a character to uppercase.
 */
 int	ft_toupper(int c);
 
 /*
-	Function:  ft_isalnum
-
-	check character is alphabet or number
-	return 1 to true or 0 to false
+	ft_isalnum is a function that checks if a character is alphanumeric.
 */
 int	ft_isalnum(int c);
 
 /*
-	Function: ft_isascii
-
-	check if is ascii character between 0 at 127
-	return 1 to true or 0 to false
+	ft_isascii is a function that checks if a character is an ASCII character.
 */
 int	ft_isascii(int c);
 
 /*
-	Function: ft_strlen
-
-	count each positon at find NULL and return numbers of letter
-	return int with count characters
+	ft_strlen is a function that returns the length of a string.
 */
 size_t	ft_strlen(const char *s);
 
 /*
-	Function: memset
-
-	run an array and set value of value each position
-	just like calloc but with a customize value
+	ft_memset is a function that fills memory with a constant byte. 
 */	
 void	*ft_memset(void *s, int c, size_t n);
 
 /*
-	Function: ft_bzero
-
-	set to pointer with 0 each position
+	ft_bzero is a function that fills memory with zeros.
 */
 void	ft_bzero(void *s, size_t n);
 
 /*
-	Function: ft_memcpy
-
-	copy memory from src to dest but can overlap area.
+	ft_memcpy is a function that copies memory.
+*/
 */
 void *ft_memcpy(void *dest, const void *src, size_t n);
 
 /*
-	Function: ft_memmove
-
-	check overlap and after copy
+	ft_memmove is a function that copies memory.
+*/
 */
 void *ft_memmove (void *dest, const void *src, size_t n);
 
 /*
-
+	ft_strchr is a function that locates a character in a string.
 */
 char *ft_strchr(const char *s, int c);
 
 /*
-
+	ft_strdup is a function that duplicates a string.
 */
 size_t	ft_strdump(const char *s);
 
 /*
-
+	ft_strlcat is a function that concatenates two strings.
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /*
-	Function: ft_strlcpy
-
-	copy char from src to dst and check size
-	return count letters
+	ft_strlcpy is a function that copies a string.
+*/
 */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /*
-	
+	ft_strnstr is a function that locates a substring.	
 */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 /*
-
+	ft_strrchr is a function that locates a character in a string.
 */
 char *ft_strrchr(const char *s, int c);
 
 /*
-
+	ft_strncmp is a function that compares two strings.
 */
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /*
-
+	ft_memchr is a function that locates a character in a string.
 */
 void	*ft_memchr(const void *s, int c, size_t n);
 
 /*
-
+	ft_memcmp is a function that compares two strings.
 */
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /*
-
+	ft_atoi is a function that converts a string to an integer.
 */
 int	ft_atoi(const char *nptr);
 
 /*
-
+	ft_calloc is a function that allocates memory for an array with zeros.
 */
 void	*ft_calloc(size_t count, size_t size);
 
 /*
-
+	ft_strdup is a function that duplicates a string.
 */
 char	*ft_strdup(const char *str);
 
 /*
-
+	ft_substr is a function that extracts a substring.
 */
 char	*ft_substr(char const *s, unsigned int start,size_t len);

@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 21:53:59 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/21 01:33:31 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/21 18:26:46 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,31 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t		i;
-	int			count_dst;
-	const char	*buffer_src;
-	char		*buffer_dst;
+	unsigned int	src_count;
+	unsigned int	dst_count;
+	unsigned int	dst_len;
+	unsigned int	src_len;
 
-	buffer_src = src;
-	buffer_dst = dst;
-	count_dst = 0;
-	while (buffer_dst[count_dst] != '\0')
-		count_dst++;
-	i = 0;
-	while (i < size && buffer_src[i] != '\0')
+	src_count = 0;
+	dst_count = 0;
+	while (dst[dst_count] != '\0')
+		dst_count++;
+	dst_len = dst_count;
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (src_len + size);
+	while (src[src_count] != '\0'
+		&& src_count < size - dst_len - 1)
 	{
-		buffer_dst[count_dst] = buffer_src[i];
-		i++;
-		count_dst++;
+		dst[dst_count] = src[src_count];
+		src_count++;
+		dst_count++;
 	}
-	buffer_dst[count_dst] = '\0';
-	return (count_dst);
+		dst[dst_count] = '\0';
+	return (dst_len + src_len);
 }
+
+/*
+	strlcat() that means the initial length of
+    dst plus the length of src.
+*/

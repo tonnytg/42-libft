@@ -16,3 +16,7 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+/*
+	The toupper() function converts the letter c to uppercase, if possible.
+*/
