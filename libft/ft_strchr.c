@@ -6,11 +6,11 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 02:29:25 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/19 04:11:16 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/30 03:53:57 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	ch;
 

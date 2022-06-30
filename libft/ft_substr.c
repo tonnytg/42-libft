@@ -6,13 +6,13 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 20:15:28 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/21 21:17:50 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/30 03:57:11 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	src_count;
 	size_t	sub_count;

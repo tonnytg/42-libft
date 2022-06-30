@@ -6,23 +6,21 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 02:29:25 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/19 16:06:11 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/06/30 03:56:35 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	ch;
 	char	*temp;
+	char	ch;
 
 	ch = c;
 	temp = 0;
 	while (*s != '\0')
 	{
 		if (*s == ch)
-		{
-			temp = (char *)s;			
-		}
+			temp = (char *)s;
 		s++;
 	}
 	return (temp);
