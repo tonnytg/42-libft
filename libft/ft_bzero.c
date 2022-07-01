@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 22:47:44 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/17 05:39:12 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:34:33 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,3 @@ void	ft_bzero(void *s, size_t n)
 	}
 	return ;
 }
-
-/*
-	ft_bzero sets the first n characters of the string s to 0.
-*/

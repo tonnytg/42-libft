@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 23:31:58 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/21 01:31:54 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:34:28 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,3 @@ static int	ft_isspace(char c)
 {
 	return (c == 32 || (c >= 9 && c <= 13));
 }
-
-/*
-	ft_atoi returns the integer value of a string.
-*/

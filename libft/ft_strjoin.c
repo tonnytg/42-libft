@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 16:55:33 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/23 17:18:40 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:36:37 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	m[i] = '\0';
 	return (m);
 }
-
-/*
-	concatenate s1 and s2. Return a new string
-*/

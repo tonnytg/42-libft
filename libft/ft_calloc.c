@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:41:39 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/21 19:48:50 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:34:36 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_memset(mem, '\0', (nmemb * size));
 	return (mem);
 }
-
-/*
-	allocates memory for an array of nmemb elements of size bytes
-	each and returns a pointer to the allocated memory.
-	The memory is set to zero.  If nmemb or size is 0,
-    then calloc() returns either NULL
-*/

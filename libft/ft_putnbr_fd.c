@@ -6,12 +6,11 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 23:51:04 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/24 23:55:49 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:36:12 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -31,15 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(nb % 10, fd);
 	}
 }
-
-/*
-Function name ft_putnbr_fd
-	Prototype void ft_putnbr_fd(int n, int fd);
-	Turn in files -
-Parameters n: The integer to output.
-	fd: The file descriptor on which to write.
-Return value None
-	External functs. write
-Description Outputs the integer ’n’ to the given file
-	descriptor.
-*/

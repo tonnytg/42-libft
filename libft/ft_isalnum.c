@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:50:58 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/13 21:44:01 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:34:40 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isalnum(int c)
 		|| (c >= 65 && c <= 90)
 		|| (c >= 48 && c <= 57));
 }
-
-/*
-	Function:  ft_isalnum
-
-	check character is alphabet or number
-	return 1 to true or 0 to false
-*/

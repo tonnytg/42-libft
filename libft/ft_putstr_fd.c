@@ -6,12 +6,11 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 23:39:21 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/25 03:11:54 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:36:18 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -27,17 +26,3 @@ void	ft_putstr_fd(char *s, int fd)
 		}
 	}
 }
-
-/*
-
-	Function name ft_putstr_fd
-	Prototype void ft_putstr_fd(char *s, int fd);
-	Turn in files -
-	Parameters s: The string to output.
-	fd: The file descriptor on which to write.
-	Return value None
-	External functs. write
-	Description Outputs the string ’s’ to the given file
-	descriptor.
-
-*/

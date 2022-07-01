@@ -6,27 +6,24 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 02:29:25 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/30 03:56:35 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:37:19 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*temp;
-	char	ch;
+	int		i;
 
-	ch = c;
-	temp = 0;
-	while (*s != '\0')
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (*s == ch)
-			temp = (char *)s;
-		s++;
+		if (s[i] == (char)c)
+		{
+			return ((char *)s + i);
+		}
+		i--;
 	}
-	return (temp);
+	return (NULL);
 }
-
-/*
- The ft_strrchr() function returns a pointer
- to the last occurrence of the character c in the  strings.
-*/

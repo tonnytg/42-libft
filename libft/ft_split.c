@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:33:57 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/24 21:48:07 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:36:24 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,24 +86,3 @@ char	**ft_split(char const *s, char c)
 	ft_c_arr_sub(arr, s, c);
 	return (arr);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	int i = 0;
-	char **arr;
-	char *value = "Antonio Thomacelli Gomes";
-	char split = ' ';
-
-	arr = ft_c_arr(value, split);
-	while (i < ft_count_words(value, split))
-	{
-		printf("[%d] - %s\n",i, arr[i]);
-		i++;
-	}
-	free(arr);
-	return (0);
-}
-*/

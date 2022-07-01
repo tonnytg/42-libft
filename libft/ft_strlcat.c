@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/18 21:53:59 by antthoma          #+#    #+#             */
-/*   Updated: 2022/06/21 18:26:46 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/01 23:36:42 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,13 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	src_count;
-	unsigned int	dst_count;
-	unsigned int	dst_len;
-	unsigned int	src_len;
+	size_t	dstlen;
+	size_t	srclen;
 
-	src_count = 0;
-	dst_count = 0;
-	while (dst[dst_count] != '\0')
-		dst_count++;
-	dst_len = dst_count;
-	src_len = ft_strlen(src);
-	if (size <= dst_len)
-		return (src_len + size);
-	while (src[src_count] != '\0'
-		&& src_count < size - dst_len - 1)
-	{
-		dst[dst_count] = src[src_count];
-		src_count++;
-		dst_count++;
-	}
-		dst[dst_count] = '\0';
-	return (dst_len + src_len);
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	if (size <= dstlen)
+		return (srclen + size);
+	ft_strlcpy(dst + dstlen, src, size - dstlen);
+	return (srclen + dstlen);
 }
-
-/*
-	strlcat() that means the initial length of
-    dst plus the length of src.
-*/
