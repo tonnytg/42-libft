@@ -1,25 +1,13 @@
-CC	= gcc
-CC_ARGS = -Wextra -Wall -Werror -Werror=sign-compare -I . -c
+all: libfttester war-machine
+	@echo "Finish test"
 
-NAME = libft.a
-FILES = $(wildcard libft/*.c)
+libfttester:
+	@echo "test1"
+	cd libft && git clone git@github.com:Tripouille/libftTester.git
+	cd libft && cd libftTester && make
 
-all: copy check copile clean
-
-copile:
-	$(CC) $(CC_ARGS) $(FILES)
-
-copy: libft
-	cp -v -a ../libft-v1/* libft
-	@echo "---"
-
-libft:
-	@mkdir libft
-
-check:
-	norminette -R CheckForbiddenSourceHeader libft/ft*.c
-	@echo "---"
-
-clean:
-	rm -rf *.o
-	rm -rf $(NAME)
+war-machine:
+	@echo "test2"
+	cd libft && git clone git@github.com:y3ll0w42/libft-war-machine.git
+	cd libft && cd libft-war-machine && bash grademe.sh
+	cd libft && cd libft-war-machine && bash grademe.sh
