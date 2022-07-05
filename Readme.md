@@ -3,7 +3,7 @@
     This project rewrite some functions of C Standar Library
   
 
-folder `libft` had been created.
+folder `libft` has been created.
 
 
 All files in libft with ft_*.c it is a function,
