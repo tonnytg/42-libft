@@ -1,3 +1,6 @@
+TERM=xterm-256color
+SHELL=/bin/bash
+
 all: libfttester war-machine
 	@echo "Finish test"
 
