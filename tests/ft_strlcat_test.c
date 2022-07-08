@@ -18,16 +18,31 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int main()
 {
-	int c;
-	int d;
+	int a;
+	int b;
 	char *name = "Antonio";
-	char value[20] = "abc";
-	char *temp = "abcAntonio";
+	char value[11] = "abc";
+	char *expected = "abcAntonio";
 
-	c = ft_strlcat(value, name, sizeof(name));
-	printf("%s - %d\n", value, c);
+	a = ft_strlcat(value, name, 11);
+	printf("%s - %d\n", value, a);
 
-	d = strlen(name);
-	printf("%s - %d\n", name, d);
-	assert(*temp == *value);	
+	b = strlen(name);
+	printf("%s - %d\n", name, b);
+	b = strlen(value);
+	printf("%s - %d\n", value, b);
+	assert(*expected == *value);
+
+	char *name2 = "Antonio";
+	char value2[11] = "abc";
+	char *expected2 = "abcAntonio";
+
+	a = strlcat(value2, name2, 11);
+	printf("%s - %d\n", value2, a);
+
+	b = strlen(name2);
+	printf("%s - %d\n", name2, b);
+	b = strlen(value2);
+	printf("%s - %d\n", value2, b);
+	assert(*expected2 == *value);
 }
