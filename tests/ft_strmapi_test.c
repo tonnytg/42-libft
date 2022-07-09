@@ -22,5 +22,4 @@ int    main()
 	s2 = ft_strmapi(s1, *myfunc);
 	printf("%s\n", s2);
 	assert(strcmp(s2, expected) == 0);
-	free(s2);
 }

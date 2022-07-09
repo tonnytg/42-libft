@@ -6,7 +6,7 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 22:43:27 by antthoma          #+#    #+#             */
-/*   Updated: 2022/07/01 23:21:32 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/06 00:36:28 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove (void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strdump(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
