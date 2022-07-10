@@ -13,5 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: make
-        run: make
+      - name: copile libft
+        run: make copile
+
+      - name: run mytest
+        run: make mytest
+
+      - name: run test with war-machine (external tests)
+        run: make war-machine
