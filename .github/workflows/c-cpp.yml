@@ -13,6 +13,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: install depends
+        run: sudo apt-get install libxmu-dev libxmu-headers freeglut3-dev libxext-dev libxi-dev
+
       - name: copile libft
         run: make copile
 
