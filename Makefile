@@ -27,12 +27,13 @@ war-machine:
 	cd libft/libft-war-machine-master && bash grademe.sh
 	cd libft/libft-war-machine-master && bash grademe.sh
 
-mytest: copile $(OBJ)
+mytest: $(OBJ)
 
-$(OBJ):
+$(OBJ): copile
 	@echo "Test - $@"
 	@clang -g3 -ldl -I libft/ -L libft/ tests/$@_test.c -lft -o ./a.out -lbsd
 	@./a.out
+	sudo apt-get install libxmu-dev libxmu-headers freeglut3-dev libxext-dev libxi-dev
 
 copile:
 	make -C libft
