@@ -6,12 +6,12 @@
 #    By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 15:52:20 by antthoma          #+#    #+#              #
-#    Updated: 2022/07/07 16:00:45 by antthoma         ###   ########.fr        #
+#    Updated: 2022/07/12 00:13:38 by antthoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			= gcc
-CC_FLAGS	= -std=c99 -Wall -Werror -Wextra -I . -c
+CC_FLAGS	= -Wall -Werror -Wextra -I . -c
 NAME		= libft.a
 FILES		= 	\
 				ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
@@ -27,7 +27,7 @@ BONUS_FILE	=	\
 				
 OBJS_BONUS	= $(patsubst %.c,%.o, $(BONUS_FILE))
 
-all: $(OBJS)
+all: $(NAME)
 
 bonus: $(OBJS) $(OBJS_BONUS)
 
@@ -35,6 +35,7 @@ bonus: $(OBJS) $(OBJS_BONUS)
 	$(CC) $(CC_FLAGS) $< -o $@
 	ar rsc $(NAME) $@
 
+$(NAME): $(OBJS)
 
 clean:
 	rm -rf *.o
