@@ -6,11 +6,11 @@
 /*   By: antthoma <antthoma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 13:33:57 by antthoma          #+#    #+#             */
-/*   Updated: 2022/07/01 23:36:24 by antthoma         ###   ########.fr       */
+/*   Updated: 2022/07/11 14:21:40 by antthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_count_words(char const *s, char c)
 {
